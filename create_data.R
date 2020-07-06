@@ -76,6 +76,6 @@ runProgram <- function(my.clean.data, elements.col, outname){
   colnames(df2)<-rownames(big.count)
   head(df2)
   
-  write.csv(df,file= paste("/",outname,"LR.csv",sep=""))
-  write.csv(df2,file= paste("/",outname,"PP.csv",sep=""))
+  write.csv(df,file= paste(outname,"LR.csv",sep=""))
+  write.csv(df2,file= paste(outname,"PP.csv",sep=""))
 }
