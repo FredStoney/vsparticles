@@ -82,3 +82,19 @@ runProgram <- function(my.clean.data, elements.col, outname){
   write.csv(df,file= paste(outname,"LR.csv",sep=""))
   write.csv(df2,file= paste(outname,"PP.csv",sep=""))
 }
+
+
+
+cleaner <- function(data, number.of.elements ){
+  
+  chopped <- data[,1:number.of.elements]
+  nozero <- data[apply(chopped[,-1], 1, function(x) !all(x==0)),]
+  return(nozero)
+}
+
+
+
+
+
+
+
