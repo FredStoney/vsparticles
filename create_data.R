@@ -1,6 +1,7 @@
 
 
 library(VSParticles)
+library(tools)
 
 openfiles <- function(directory){
   df <- data.frame()
@@ -8,12 +9,14 @@ openfiles <- function(directory){
   ext.sub.files <- paste(directory, sub.files, sep = "/")
   
   for (filename in ext.sub.files){
+    if(file_ext(filename) == "csv"){
     location <- tools::file_path_sans_ext(basename(filename))
     temp_csv <- read.csv(filename, header = T, comment.char = "", check.names = F)
     temp_csv$location <- location
     temp_csv$sub.location <- 1
     temp_csv$type = "C"
     df <- rbind(df, temp_csv)
+    }
   }
   df
 }

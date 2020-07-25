@@ -1,7 +1,7 @@
 ####################### INPUTS ######################################
 # assumes DAve in 7th column
-output_dir <- "C:/Users/fpsto/Documents/Work/StoneyForensic/June242020/output/"
-my_data_dir <- "C:/Users/fpsto/Documents/Work/StoneyForensic/June242020/Packaging/"
+output_dir <- "C:/N9New_05-19-20/N9New OJ-7 2017-IJ-CX-0030/OJ-7 Experiment 5/Output9/"
+my_data_dir <- "C:/N9New_05-19-20/N9New OJ-7 2017-IJ-CX-0030/OJ-7 Experiment 5/Cell Phones/"
 #####################################################################
 
 for(data_path in list.files(my_data_dir)){
